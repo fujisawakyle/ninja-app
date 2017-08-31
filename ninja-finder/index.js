@@ -11,6 +11,8 @@ mongoose.connect('mongodb://localhost/ninjago');
 //mongoose promise is deprecated so need to set to global promise.
 mongoose.Promise = global.Promise;
 
+//gives static html to user, no reason to continue further middleware commands
+app.use(express.static('public'));
 
 //middleware
 //must before our route init
